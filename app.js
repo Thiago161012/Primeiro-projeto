@@ -8,7 +8,7 @@
 
 let listaDeNumerosSorteados = [];
 
-let numeroLimite = 100; 
+let numeroLimite = 10; 
 
 let numeroSecreto = gerarUmNumeroAleatorio();
   
@@ -25,7 +25,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function exibirMensagemInicial(){
     exibirTextoNaTela ('h1', 'Jogo do número secreto');
-    exibirTextoNaTela ('p','Escolha um número entre 1 e 100');
+    exibirTextoNaTela ('p','Escolha um número entre 1 e 10');
 }
 exibirMensagemInicial();
 //Aqui o .value é para receber o valor digitado, seja ele em string ou number, esse codigo faz com que voce receba o VALOR, ou seja voce recebe a informação que foi escrita no campo 'input'!!
@@ -60,7 +60,6 @@ function limparCampo(){
 //Aqui criamos a função para que o gerarNumeroAleatorio de fato gere um numero aleatorio com isso é utilizado o Math.random, e para que o numer volte para nos de alguma maneira é utilizado o return
     function gerarUmNumeroAleatorio(){
       let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-      console.log (numeroEscolhido);
       let quantidadeDeElementosDaLista = listaDeNumerosSorteados.length;
         if (quantidadeDeElementosDaLista == numeroLimite) {
           listaDeNumerosSorteados = [];
